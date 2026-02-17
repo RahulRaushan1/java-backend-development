@@ -1,6 +1,7 @@
 package Collection.CollectionDemo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class A2_ArrayListDemo {
@@ -23,6 +24,17 @@ public class A2_ArrayListDemo {
         else System.out.println("not empty");
         nums.add(3,90);
         System.out.println(nums);
+
+        Iterator<Integer> it= nums.iterator();
+        while(it.hasNext()){
+            int data= it.next();
+            if(data==30){
+                it.remove();
+            }
+            else {
+                System.out.println(data);
+            }
+        }
 
     }
 }
