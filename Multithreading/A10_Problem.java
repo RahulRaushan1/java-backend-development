@@ -2,8 +2,10 @@ package Multithreading;
 class Addition {
     int sum = 0;
 
-      synchronized public void add() {
-        sum = sum + 1;
+       public void add() {
+       synchronized (this){
+           sum = sum + 1;
+       }
     }
 }
 class MyThread3 extends Thread {
