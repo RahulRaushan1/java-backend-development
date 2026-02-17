@@ -1,5 +1,6 @@
 package Collection.CollectionDemo;
 
+import java.util.Enumeration;
 import java.util.Vector;
 
 public class A5_VectorDemo {
@@ -8,5 +9,10 @@ public class A5_VectorDemo {
         vector.add(10);
         vector.add(20);
         vector.add(30);
+
+        Enumeration<Integer> e= vector.elements();
+        while(e.hasMoreElements()){
+            System.out.println(e.nextElement());
+        }
     }
 }
