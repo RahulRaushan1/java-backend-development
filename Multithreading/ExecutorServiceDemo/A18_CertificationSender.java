@@ -15,6 +15,7 @@ public class A18_CertificationSender implements Runnable{
         }catch (InterruptedException e){
             throw new RuntimeException(e);
         }
-        //System.out.println("certificate sent to \"+stdName + \n" + );
+        System.out.println("certificate sent "+stdName+"by thread"+
+                Thread.currentThread().getName());
     }
 }
