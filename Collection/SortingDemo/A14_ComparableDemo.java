@@ -1,7 +1,5 @@
 package Collection.SortingDemo;
 
-import OOPs.Student;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -32,6 +30,21 @@ public class A14_ComparableDemo {
 
         Collections.sort(arrayList);
         System.out.println(arrayList);
+
+        ArrayList<A16_Employee> emp = new ArrayList<>();
+        A16_Employee e1 = new A16_Employee(11,"Rohan","IT");
+        A16_Employee e2 = new A16_Employee(6,"Rohan","IT");
+        A16_Employee e3 = new A16_Employee(9,"Rohan","IT");
+
+        emp.add(e1);
+        emp.add(e2);
+        emp.add(e3);
+
+        System.out.println(emp);
+        Collections.sort(emp,new A16_Employee());
+        System.out.println(emp);
+
+
 
 
     }
