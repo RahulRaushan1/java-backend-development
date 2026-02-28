@@ -17,15 +17,16 @@ public class A4_CustomerService {
         ps.close();
         conn.close();
     }
-    public List <A2_Customer> getAllCustomers() throws SQLException {
+    public A2_Customer getCustomersBasedOnNum(String number) throws SQLException {
+        A2_Customer customer = new A2_Customer();
         List<A2_Customer> list = new ArrayList<>();
         Connection conn = A1_DbConfig.getConnection();
         Statement st = conn.createStatement();
-        ResultSet rs=st.executeQuery("SELECT * from customers");
+        ResultSet rs=st.executeQuery("SELECT * from customers where phone ="+number);
         while (rs.next()){
-            list.add(new A2_Customer(rs.getInt("id"),rs.getString("name"),rs.getString("phone")));
+           customer = new A2_Customer(rs.getInt("id"),rs.getString("name"),rs.getString("phone"));
         }
-        return list;
+        return customer;
     }
 
 }
