@@ -11,6 +11,10 @@ public class A2_Customer {
         this.phone = phone;
     }
 
+    public A2_Customer() {
+
+    }
+
     public int getId() {
         return id;
     }
