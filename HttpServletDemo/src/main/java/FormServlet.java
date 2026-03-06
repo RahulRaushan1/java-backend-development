@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-@WebServlet("/form")
+@WebServlet("/login")
 
 
 public class FormServlet  extends HttpServlet {
