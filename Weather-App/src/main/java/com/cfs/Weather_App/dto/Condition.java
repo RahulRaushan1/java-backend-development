@@ -1,17 +1,17 @@
 package com.cfs.Weather_App.dto;
 
-public class Condition {
+public class Condition{
     public String text;
     public String icon;
     public int code;
-
-    public Condition() {
-    }
 
     public Condition(String text, String icon, int code) {
         this.text = text;
         this.icon = icon;
         this.code = code;
+    }
+
+    public Condition() {
     }
 
     public String getText() {

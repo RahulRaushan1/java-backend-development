@@ -1,6 +1,7 @@
 package com.cfs.Weather_App.dto;
 
-public class Location {
+
+public class Location{
     public String name;
     public String region;
     public String country;

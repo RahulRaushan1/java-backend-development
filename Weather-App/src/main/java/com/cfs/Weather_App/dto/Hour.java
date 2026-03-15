@@ -1,8 +1,8 @@
 package com.cfs.Weather_App.dto;
 
-public class Current{
-    public int last_updated_epoch;
-    public String last_updated;
+public class Hour{
+    public int time_epoch;
+    public String time;
     public double temp_c;
     public double temp_f;
     public int is_day;
@@ -15,6 +15,7 @@ public class Current{
     public double pressure_in;
     public double precip_mm;
     public double precip_in;
+    public double snow_cm;
     public int humidity;
     public int cloud;
     public double feelslike_c;
@@ -25,61 +26,30 @@ public class Current{
     public double heatindex_f;
     public double dewpoint_c;
     public double dewpoint_f;
+    public int will_it_rain;
+    public int chance_of_rain;
+    public int will_it_snow;
+    public int chance_of_snow;
     public double vis_km;
     public double vis_miles;
-    public double uv;
     public double gust_mph;
     public double gust_kph;
+    public double uv;
 
-    public Current() {
+    public int getTime_epoch() {
+        return time_epoch;
     }
 
-    public Current(int last_updated_epoch, String last_updated, double temp_c, double temp_f, int is_day, Condition condition, double wind_mph, double wind_kph, int wind_degree, String wind_dir, double pressure_mb, double pressure_in, double precip_mm, double precip_in, int humidity, int cloud, double feelslike_c, double feelslike_f, double windchill_c, double windchill_f, double heatindex_c, double heatindex_f, double dewpoint_c, double dewpoint_f, double vis_km, double vis_miles, double uv, double gust_mph, double gust_kph) {
-        this.last_updated_epoch = last_updated_epoch;
-        this.last_updated = last_updated;
-        this.temp_c = temp_c;
-        this.temp_f = temp_f;
-        this.is_day = is_day;
-        this.condition = condition;
-        this.wind_mph = wind_mph;
-        this.wind_kph = wind_kph;
-        this.wind_degree = wind_degree;
-        this.wind_dir = wind_dir;
-        this.pressure_mb = pressure_mb;
-        this.pressure_in = pressure_in;
-        this.precip_mm = precip_mm;
-        this.precip_in = precip_in;
-        this.humidity = humidity;
-        this.cloud = cloud;
-        this.feelslike_c = feelslike_c;
-        this.feelslike_f = feelslike_f;
-        this.windchill_c = windchill_c;
-        this.windchill_f = windchill_f;
-        this.heatindex_c = heatindex_c;
-        this.heatindex_f = heatindex_f;
-        this.dewpoint_c = dewpoint_c;
-        this.dewpoint_f = dewpoint_f;
-        this.vis_km = vis_km;
-        this.vis_miles = vis_miles;
-        this.uv = uv;
-        this.gust_mph = gust_mph;
-        this.gust_kph = gust_kph;
+    public void setTime_epoch(int time_epoch) {
+        this.time_epoch = time_epoch;
     }
 
-    public int getLast_updated_epoch() {
-        return last_updated_epoch;
+    public String getTime() {
+        return time;
     }
 
-    public void setLast_updated_epoch(int last_updated_epoch) {
-        this.last_updated_epoch = last_updated_epoch;
-    }
-
-    public String getLast_updated() {
-        return last_updated;
-    }
-
-    public void setLast_updated(String last_updated) {
-        this.last_updated = last_updated;
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public double getTemp_c() {
@@ -178,6 +148,14 @@ public class Current{
         this.precip_in = precip_in;
     }
 
+    public double getSnow_cm() {
+        return snow_cm;
+    }
+
+    public void setSnow_cm(double snow_cm) {
+        this.snow_cm = snow_cm;
+    }
+
     public int getHumidity() {
         return humidity;
     }
@@ -258,6 +236,38 @@ public class Current{
         this.dewpoint_f = dewpoint_f;
     }
 
+    public int getWill_it_rain() {
+        return will_it_rain;
+    }
+
+    public void setWill_it_rain(int will_it_rain) {
+        this.will_it_rain = will_it_rain;
+    }
+
+    public int getChance_of_rain() {
+        return chance_of_rain;
+    }
+
+    public void setChance_of_rain(int chance_of_rain) {
+        this.chance_of_rain = chance_of_rain;
+    }
+
+    public int getWill_it_snow() {
+        return will_it_snow;
+    }
+
+    public void setWill_it_snow(int will_it_snow) {
+        this.will_it_snow = will_it_snow;
+    }
+
+    public int getChance_of_snow() {
+        return chance_of_snow;
+    }
+
+    public void setChance_of_snow(int chance_of_snow) {
+        this.chance_of_snow = chance_of_snow;
+    }
+
     public double getVis_km() {
         return vis_km;
     }
@@ -274,14 +284,6 @@ public class Current{
         this.vis_miles = vis_miles;
     }
 
-    public double getUv() {
-        return uv;
-    }
-
-    public void setUv(double uv) {
-        this.uv = uv;
-    }
-
     public double getGust_mph() {
         return gust_mph;
     }
@@ -296,5 +298,13 @@ public class Current{
 
     public void setGust_kph(double gust_kph) {
         this.gust_kph = gust_kph;
+    }
+
+    public double getUv() {
+        return uv;
+    }
+
+    public void setUv(double uv) {
+        this.uv = uv;
     }
 }
